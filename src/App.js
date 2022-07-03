@@ -1,14 +1,14 @@
-import React from "react";
+import * as React from "react";
 import './App.css';
 import Header from './Header';
+import Home from "./Home";
 
 function App() {
   return (
     //BEM
     <div className="app">
-      <h1>Hello Sweet Creation Studios Programmers, let's build the Amazon Store</h1>
       <Header />
-      {/* Home */}
+      <Home />
     </div>
   );
 }
