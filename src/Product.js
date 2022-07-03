@@ -5,21 +5,22 @@ function Product({title, image, price, rating}) {
   return (
     <div className="product">
         <div className="product_info">
-            <p>The Lean Startup</p>
+            <p>{title}</p>
             <p className="product_price">
                 <small>$</small>
-                <strong>19.99</strong>
+                <strong>{price}</strong>
             </p>
             <div className="product_rating">
-            <p>star</p>
-            <p>star</p>
-            <p>star</p>
+                {Array(rating)
+                    .fill()
+                    .map((_, i) => (
+                        <p>✰</p>
+                    ))
+                }
             </div>
         </div>
 
-        <img src="http://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg"
-            alt=""
-        />
+        <img src={image}  alt=""/>
 
         <button>Add to Basket</button>
     </div>
